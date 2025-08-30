@@ -8,44 +8,55 @@
 </head>
 <body>
 
-    <div>
-        <h1>Pomodoro 2025.2</h1>
+    <div class="container">
 
-        <button>Pomodoro</button>
-        <button>Pausa curta</button>
-        <button>Pausa longa</button>
+        <div class="timer">
 
-        <div id="clock">00:00</div>
-        <div>#1 Pomodoro</div>
+            <div>
+                <h1>Pomodoro 2025.2</h1>
 
-        <button>Iniciar</button>
-        <button>Parar</button>
-        <button>Finalizar</button>
-    </div>
+                <button class="btn-link btn-active">Pomodoro</button>
+                <button class="btn-link">Pausa curta</button>
+                <button class="btn-link">Pausa longa</button>
+            </div>
 
-    <div>
-        <h2>Tarefas</h2>
-        <button>Ocultar finalizadas</button>
+            <div class="counter">
+                <div id="clock">00:00</div>
+                <div class="cicle">#1 Pomodoro</div>
+            </div>
 
-        <ul>
-            <li>
-                <input type="checkbox" checked>
-                <p>Criar o HTML do Pomodoro App</p>
-            </li>
-            <li>
-                <input type="checkbox">
-                <p>Aplicar estilos CSS</p>
-            </li>
-            <li>
-                <input type="checkbox">
-                <p>Adicionar interatividade com Javascript</p>
-            </li>
-            <li>
-                <input type="text" autofocus placeholder="Digite sua tarefa">
-            </li>
-        </ul>
+            <div>
+                <button class="btn-link btn-large btn-active">Iniciar</button>
+                <button class="btn-link btn-large btn-active hidden">Parar</button>
+                <button class="btn-link">Finalizar</button>
+            </div>
+        </div>
 
-        <button>Nova Tarefa</button>
+        <div class="tasks">
+            <h2>Tarefas</h2>
+            <button>Ocultar finalizadas</button>
+
+            <ul>
+                <li>
+                    <input type="checkbox" checked>
+                    <p>Criar o HTML do Pomodoro App</p>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Aplicar estilos CSS</p>
+                </li>
+                <li>
+                    <input type="checkbox">
+                    <p>Adicionar interatividade com Javascript</p>
+                </li>
+                <li>
+                    <input type="text" autofocus placeholder="Digite sua tarefa">
+                </li>
+            </ul>
+
+            <button>Nova Tarefa</button>
+        </div>
+
     </div>
 
 
