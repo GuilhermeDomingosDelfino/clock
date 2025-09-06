@@ -75,6 +75,12 @@ button{
     padding: 16px 32px;
 }
 
+.btn-alt{
+    background-color: #9EE200;
+    border-color: #9EE200;
+    color: var(--color-primary);
+}
+
 .btn-active,
 .btn-link:hover{
     background-color: black;
@@ -83,4 +89,66 @@ button{
 
 .hidden{
     display: none;
+}
+
+
+/* BEM - Block Element Modifier */
+
+.tasks{
+    display: flex;
+    flex-direction:column;
+    width: 50%;
+    padding: 24px 72px;
+}
+
+
+.tasks__header{
+    padding: 24px 0;
+}
+
+.tasks__header h2{
+    display: inline-block;
+    margin: 0;
+}
+
+.tasks__header button{
+    float: right;
+}
+
+
+.tasks__list{
+    flex-grow: 1;
+    padding-left: 0;
+}
+
+.tasks__list li{
+    display: flex;
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tasks__list--card li{
+    display: flex;
+    padding: 18px 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.tasks__list li > label{
+    flex-grow: 1;
+    padding: 4px 8px;
+}
+
+.tasks__list li input[type="checkbox"]:checked + label{
+    text-decoration: line-through;
+}
+
+.tasks__list li > input[type="text"]{
+    width: 100%;
+    padding: 4px;
+    margin-left: 8px;
+    font-size: 1rem;
+    border: none;
 }

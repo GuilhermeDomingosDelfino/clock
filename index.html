@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pomodoro 2025.2</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body>
 
@@ -33,28 +34,31 @@
         </div>
 
         <div class="tasks">
-            <h2>Tarefas</h2>
-            <button>Ocultar finalizadas</button>
 
-            <ul>
+            <div class="tasks__header">
+                <h2>Tarefas</h2>
+                <button class="btn-link btn-active">Ocultar finalizadas</button>
+            </div>
+
+            <ul class="tasks__list tasks__list--card ">
                 <li>
-                    <input type="checkbox" checked>
-                    <p>Criar o HTML do Pomodoro App</p>
+                    <input type="checkbox" id="task1" checked>
+                    <label for="task1">2. Criar o HTML do Pomodoro App</label>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <p>Aplicar estilos CSS</p>
+                    <input type="checkbox" id="task2">
+                    <label for="task2">Aplicar estilos CSS</label>
                 </li>
                 <li>
-                    <input type="checkbox">
-                    <p>Adicionar interatividade com Javascript</p>
+                    <input type="checkbox" id="task3">
+                    <label for="task3">Adicionar interatividade com Javascript</label>
                 </li>
                 <li>
                     <input type="text" autofocus placeholder="Digite sua tarefa">
                 </li>
             </ul>
 
-            <button>Nova Tarefa</button>
+            <button class="btn-large btn-alt">Nova Tarefa</button>
         </div>
 
     </div>
