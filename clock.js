@@ -1,10 +1,18 @@
 
+
+const timer = new easytimer.Timer();
 const clock = document.getElementById('clock');
+
+timer.addEventListener('secondsUpdated', () => {
+    clock.textContent = timer.getTimeValues().toString(['minutes', 'seconds']);
+});
 
 const botaoPomodoro = document.getElementById('pomodoro');
 const botaoPausaCurta = document.getElementById('pausaCurta');
 const botaoPausaLonga = document.getElementById('pausaLonga');
 
+const botaoIniciar = document.getElementById('iniciar');
+const botaoPausar = document.getElementById('pausar');
 const botaoFinalizar = document.getElementById('finalizar');
 
 const botoes = document.querySelectorAll('.botoes');
@@ -33,9 +41,23 @@ botaoPausaLonga.addEventListener('click', () => {
     botaoPausaLonga.classList.add('btn-active');
 })
 
+botaoIniciar.addEventListener('click', () => {
+    timer.start({ countdown: true, startValues: { minutes: 25 } });
+    botaoIniciar.classList.toggle('hidden');
+    botaoPausar.classList.toggle('hidden');
+})
+
+botaoPausar.addEventListener('click', () => {
+    timer.pause()
+    botaoIniciar.classList.toggle('hidden');
+    botaoPausar.classList.toggle('hidden');
+})
+
 botaoFinalizar.addEventListener('click', () => {
-    clock.textContent = "00:00"
-    limpa();
+    timer.stop();
+    botaoIniciar.classList.remove('hidden');
+    botaoPausar.classList.add('hidden');
+    botaoPomodoro.click();
 })
 
 
